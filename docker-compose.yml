@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mwc-front:
+    container_name: mwc-front
+    hostname: mwc-front
+    tty: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/mwc-front/app
